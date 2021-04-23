@@ -124,6 +124,14 @@ void loop() {
               //client.println("<p><a href=\"/26/on\"><button class=\"button\">ON</button></a></p>");
               client.println("<p><a href=\"/H\"><button class=\"button\">ON</button></a></p>");
            } 
+            // If the output26State is off, it displays the ON button       
+            if (LED_status==true) {
+              //client.println("<p><a href=\"/26/off\"><button class=\"button button2\">OFF</button></a></p>");
+              client.println("<p><a href=\"/L\"><button class=\"button button2\">OFF</button></a></p>");
+            } else {
+              //client.println("<p><a href=\"/26/on\"><button class=\"button\">ON</button></a></p>");
+              client.println("<p><a href=\"/H\"><button class=\"button\">ON</button></a></p>");
+           } 
 
             // The HTTP response ends with another blank line
             client.println();
